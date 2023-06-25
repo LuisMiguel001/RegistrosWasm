@@ -5,8 +5,8 @@ namespace RegistrosWasm.Server.DAL;
 
 public class TicketContext : DbContext
 {
-	public TicketContext(DbContextOptions<TicketContext> Options)
-		: base(Options) { }
+	public TicketContext(DbContextOptions<TicketContext> options)
+		: base(options) { }
 
 	public DbSet<Tickets> Tickets { get; set; }
 }

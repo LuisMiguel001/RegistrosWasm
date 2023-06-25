@@ -12,7 +12,7 @@ var Client = builder.Configuration.GetConnectionString("Client");
 builder.Services.AddDbContextFactory<ClientesContext>(options => options.UseSqlite(Client));
 
 var Tick = builder.Configuration.GetConnectionString("Tick");
-builder.Services.AddDbContextFactory<ClientesContext>(options => options.UseSqlite(Tick));
+builder.Services.AddDbContextFactory<TicketContext>(options => options.UseSqlite(Tick));
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
