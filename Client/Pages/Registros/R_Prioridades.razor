@@ -22,24 +22,24 @@
                     </div>
                 </div>
 
-                @*Nombre*@
+                @*PrioridadId*@
                 <div class="mb-3">
-                    <label class="form-label">Nombre</label>
-                    <InputText @bind-Value="prioridad.Descripcion" class="form-control" />
+                    <label class="form-label">PrioridadId</label>
+                    <InputNumber @bind-Value="prioridad.PrioridadId" class="form-control" />
                     <ValidationMessage For="@(() => prioridad.DiasCompromiso)" />
                 </div>
 
                 @*Descripcion*@
                 <div class="mb-3">
                     <label class="form-label">Descripci&oacuten</label>
-                    <InputText @bind-Value="prioridad.Descripcion" class="form-control"></InputText>
+                    <InputText @bind-Value="prioridad.Descripcion" class="form-control" />
                     <ValidationMessage For="@(() => prioridad.Descripcion)" />
                 </div>
 
                 @*Dias Comprometidos*@
                 <div class="mb-3">
                     <label class="form-label">D&iacuteas Comprometidos</label>
-                    <InputNumber @bind-Value="prioridad.DiasCompromiso" class="form-control"></InputNumber>
+                    <InputNumber @bind-Value="prioridad.DiasCompromiso" class="form-control" />
                     <ValidationMessage For="@(() => prioridad.DiasCompromiso)" />
                 </div>
             </div>
