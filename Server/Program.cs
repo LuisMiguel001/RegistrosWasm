@@ -8,6 +8,9 @@ var builder = WebApplication.CreateBuilder(args);
 var ConStr = builder.Configuration.GetConnectionString("ConStr");
 builder.Services.AddDbContextFactory<PrioridadContext>(options => options.UseSqlite(ConStr));
 
+var Client = builder.Configuration.GetConnectionString("Client");
+builder.Services.AddDbContextFactory<ClientesContext>(options => options.UseSqlite(Client));
+
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 
