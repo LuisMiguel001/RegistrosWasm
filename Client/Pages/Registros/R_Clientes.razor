@@ -162,7 +162,7 @@
 
 	public async void Guardar()
 	{
-		using var response = await httpClient.PostAsJsonAsync("api/Clinetes", cliente);
+		using var response = await httpClient.PostAsJsonAsync("api/Clientes", cliente);
 		if (!response.IsSuccessStatusCode)
 		{
 			Mensaje = response.ReasonPhrase ?? "Error";
@@ -185,7 +185,7 @@
 
 	public async Task Eliminar()
 	{
-		using var response = await httpClient.DeleteAsync($"api/Clinetes/{cliente.ClienteId}");
+		using var response = await httpClient.DeleteAsync($"api/Clientes/{cliente.ClienteId}");
 		if (!response.IsSuccessStatusCode)
 		{
 			Mensaje = response.ReasonPhrase ?? "Error";
