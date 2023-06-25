@@ -1,5 +1,5 @@
 ﻿@page "/Prioridad"
-@page "/Prioridad/{PrioridadId:int}"
+
 @inject HttpClient httpClient
 
 <EditForm Model="id" OnValidSubmit="Guardar">
@@ -8,8 +8,9 @@
     <div class="container">
         <div class="card shadow-lg">
             <div class="card-header">
-                <h3>Registro de Sistemas</h3>
+                <h3>Registro de Prioridades</h3>
             </div>
+
             <div class="card-body">
                 @*SistemaId*@
                 <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6 col-xl-4">
@@ -28,6 +29,19 @@
                     <ValidationMessage For="@(() => prioridad.DiasCompromiso)" />
                 </div>
 
+                @*Descripcion*@
+                <div class="mb-3">
+                    <label class="form-label">Descripci&oacuten</label>
+                    <InputText @bind-Value="prioridad.Descripcion" class="form-control"></InputText>
+                    <ValidationMessage For="@(() => prioridad.Descripcion)" />
+                </div>
+
+                @*Dias Comprometidos*@
+                <div class="mb-3">
+                    <label class="form-label">D&iacuteas Comprometidos</label>
+                    <InputNumber @bind-Value="prioridad.DiasCompromiso" class="form-control"></InputNumber>
+                    <ValidationMessage For="(() => prioridad.DiasCompromiso)" />
+                </div>
             </div>
 
             <div class="card-footer d-flex justify-content-center">
@@ -41,7 +55,7 @@
     </div>
 
 </EditForm>
-
+<label>@Mensaje</label>
 
 @code {
     [Parameter]
