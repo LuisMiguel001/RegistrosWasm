@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using RegistrosWasm.Shared.Models;
 
 namespace RegistrosWasm.Server.DAL
 {
@@ -7,6 +8,6 @@ namespace RegistrosWasm.Server.DAL
         public PrioridadContext(DbContextOptions<PrioridadContext> options)
             :base(options) { }
 
-        public DbSet<PrioridadContext> PrioridadContexts { get; set; }
+        public DbSet<Prioridades> Prioridades { get; set; }
     }
 }
