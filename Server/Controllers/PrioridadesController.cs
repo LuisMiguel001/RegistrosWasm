@@ -21,7 +21,7 @@ namespace RegistrosWasm.Server.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Prioridades>>> GetPrioridades()
         {
-            if(_context.Prioridades == null)
+            if (_context.Prioridades == null)
             {
                 return NotFound();
             }
@@ -31,13 +31,13 @@ namespace RegistrosWasm.Server.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Prioridades>> GetPrioridad(int id)
         {
-            if(_context.Prioridades == null)
+            if (_context.Prioridades == null)
             {
-                return NotFound(); 
+                return NotFound();
             }
 
             var prioridades = await _context.Prioridades.FindAsync(id);
-            if(prioridades == null)
+            if (prioridades == null)
             {
                 return NotFound();
             }
@@ -59,12 +59,12 @@ namespace RegistrosWasm.Server.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeletePrioridades(int id)
         {
-            if(_context.Prioridades == null)
+            if (_context.Prioridades == null)
             {
                 return NotFound();
             }
             var prioridades = await _context.Prioridades.FindAsync(id);
-            if( prioridades == null)
+            if (prioridades == null)
             {
                 return NotFound();
             }
