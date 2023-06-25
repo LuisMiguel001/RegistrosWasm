@@ -9,22 +9,39 @@ namespace RegistrosWasm.Shared.Models;
 
 public class Clientes
 {
-    [Key]
+	[Key]
 
-    [Required(ErrorMessage = "El campo (Id) es obligatorio")]
-    public int Id { get; set; }
+	public int ClienteId { get; set; }
 
-    [Required(ErrorMessage = "El campo (ClienteId) es obligatorio")]
-    public int ClienteId { get; set; }
-    
-    [Required(ErrorMessage = "El campo (SistemaId) es obligatorio")]
-    public int SistemaId { get; set; }
+	[Required(ErrorMessage = "El nombre es un campo obligatorio")]
+	public string Nombres { get; set; } = "";
 
-    [Required(ErrorMessage = "El campo (TerminalesPermitidas) es obligatorio")]
-    public int TerminalesPermitidas { get; set; }
+	[StringLength(12)]
+	public string? Telefono { get; set; }
 
-    public string Emisor { get; set; } = "";
+	[StringLength(12)]
+	public string? Celular { get; set; }
 
-    public string Mensaje { get; set; } = "";
+	[StringLength(13)]
+	[Required(ErrorMessage = "El Rnc es un campo obligatorio")]
+	public string? Rnc { get; set; }
+
+	public string? Email { get; set; }
+
+	public string? Direccion { get; set; }
+
+	public int VecesAsignado { get; set; }
+
+	public int Id { get; set; }
+
+	public int SistemaId { get; set; }
+
+	public int TerminalesPermitidas { get; set; }
+
+	[Required(ErrorMessage = "El campo (Emisor) es obligatorio")]
+	public string Emisor { get; set; } = "";
+
+	[Required(ErrorMessage = "Debe dejar un detalle de mensaje")]
+	public string Mensaje { get; set; } = "";
 }
 
