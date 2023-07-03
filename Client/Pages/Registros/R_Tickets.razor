@@ -125,7 +125,7 @@
 
     public async Task Buscar()
     {
-        var ClienteEncotrado = await httpClient.GetFromJsonAsync<Tickets>($"api/Tickets,/{ticket.TicketId}");
+        var ClienteEncotrado = await httpClient.GetFromJsonAsync<Tickets>($"api/Tickets/{ticket.TicketId}");
 
         if (ClienteEncotrado != null)
         {
